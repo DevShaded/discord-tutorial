@@ -3,7 +3,7 @@
 module.exports = {
     name: 'avatar',
     description: 'displays a picture of a mentioned users avatar',
-    execute: async function (client, message){
+    execute: async function (client, message, args){
 
         let member = message.mentions.members.first() || message.guild.members.get(args[0]);
 
