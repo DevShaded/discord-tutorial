@@ -25,7 +25,6 @@ module.exports = {
             'My sources say no',
             'Outlook not so good',
             'Very doubtful'
-
         ];
 
         let answer = Math.floor(Math.random() * eightballArray.length);
