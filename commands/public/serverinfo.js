@@ -66,7 +66,7 @@ module.exports = {
                 ],
                 timestamp: new Date(),
                 footer: {
-                    text: 'Bob Watts',
+                    text: '',
                     icon_url: '',
                 }
             }
