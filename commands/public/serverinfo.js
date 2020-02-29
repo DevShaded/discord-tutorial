@@ -7,9 +7,9 @@ module.exports = {
     description: `Returns a message with server information`,
     execute: async function (client, message, args){
 
-        
 
-        let date = moment(message.guild.createdAt.cache).format("YYYY-MM-DD, hh:mm A");
+
+        let date = moment(message.guild.createdAt).format("YYYY-MM-DD, hh:mm A");
         await message.guild.members.fetch();
 
         let onlinePresence = message.guild.presences.cache.filter(p => p.status === 'online');
@@ -27,8 +27,6 @@ module.exports = {
 
         roles.shift();
 
-        console.log(offlinePresence);
-
         if(roles.length > 10){
             roles = `This server has **${roles.length}** roles`;
         } else {
@@ -38,7 +36,7 @@ module.exports = {
         await message.channel.send({
             embed: {
                 author: {
-                    name: message.author.username,
+                    name: message.guild.name ,
                     url: message.guild.iconURL(),
                 },
                 color: `#17a2b8`,
